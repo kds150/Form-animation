@@ -1,2 +1,2 @@
 # Form-animation
-## form animation with Javascript
+## Responsive form animation with Javascript & CSS
