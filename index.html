@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire animé</title>
+</head>
+<body>
+    <div class="container">
+        <div class="formulaire">
+            <div class="formulaire-1 ">
+                <h1>Create Account</h1>
+                <form action="">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+
+                    <div class="submit">
+                        <input id="submit" type="submit" value="SIGN UP">
+                    </div>
+                </form>
+            </div>
+
+            <div class="formulaire-2">
+                <h1>Login</h1>
+                <form action="">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+
+                    <div class="submit">
+                        <input id="submit" type="submit" value="SIGN IN">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="proposition">
+            <div class="proposition-element-1">
+                <h1>Already a User ?</h1>
+                <button id="to-signin" class="change-status">SIGN IN</button>
+            </div>
+    
+            <div class="proposition-element-2">
+                <h1>New User ?</h1>
+                <button id="to-signup" class="change-status">SIGN UP</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

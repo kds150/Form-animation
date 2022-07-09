@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: rgb(14, 28, 72);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.container{
+    position: relative;
+    height: 600px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.formulaire{
+    background: white;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.formulaire h1{
+    color: orangered;
+}
+
+.formulaire.slideRight {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+.proposition{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    top: 0;
+    right: 0%;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    background: orangered;
+}
+
+.proposition.slideLeft {
+    right: 100%;
+    transform: translateX(100%);
+}
+
+
+.formulaire-1, .formulaire-2{
+    padding: 50px;
+    /* text-align: center; */
+}
+
+
+.formulaire-2{
+    display: none;
+}
+
+.slideRight .formulaire-2{
+    display: block;
+}
+
+.slideRight .formulaire-1{
+    display: none;
+}
+
+label, input {
+    display: block;
+    margin: 10px 0;
+}
+
+input{
+    background: #efebeb;
+    border: none;
+    height: 40px;
+    width: 80%;
+}
+
+.submit, .formulaire h1{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+#submit{
+    width: auto;
+    background: orangered;
+    color: white;
+    padding: 0 40px;
+    border-radius: 25px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+
+
+.proposition-element-1, .proposition-element-2{
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.proposition-element-2{
+    display: none;
+}
+
+.slideLeft .proposition-element-2{
+    display: block;
+}
+
+.slideLeft .proposition-element-1{
+    display: none;
+}
+
+
+.change-status{
+    padding: 10px  40px;
+    border-radius: 25px;
+    background: orangered;
+    color: white;
+    border: 2px solid white;
+    margin-top: 160px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 95%;
+    }
+
+    .submit, .formulaire h1{
+        width: 95%;
+    }
+
+    .formulaire-1, .formulaire-2, .proposition-element-1, .proposition-element-2{
+        padding: 10px 25px;
+    }
+
+    .formulaire input{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    body{
+        height: auto;
+        display: block;
+        padding: 100px 0;
+    }
+    .container{
+        height: 700px;
+        display: block;
+        margin-left: 2%;
+    }
+
+    .formulaire{
+        height: 70%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .formulaire.slideRight {
+        top: 100%;
+        left: 0;
+        transform: translate(0, -100%);
+      }
+    
+    .proposition{
+        height: 30%;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transform: translate(0, -100%);
+    }
+    
+    .proposition.slideLeft {
+        top: 0;
+        transform: translateY(0);
+    }
+
+      .change-status{
+        margin-top: 0;
+      }
+
+      .formulaire-1, .formulaire-2, .proposition-element-1, .proposition-element-2{
+        padding: 10px 25px;
+    }
+
+    .proposition-element-1, .proposition-element-2{
+        text-align: center;
+    }
+}
